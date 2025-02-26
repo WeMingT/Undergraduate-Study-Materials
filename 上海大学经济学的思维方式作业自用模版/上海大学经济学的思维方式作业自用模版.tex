@@ -1,0 +1,187 @@
+\documentclass[a4paper,AutoFakeBold]{article}
+\usepackage[UTF8]{ctex}
+
+% 设置中文字体
+\setCJKmainfont[BoldFont=SimHei, ItalicFont=KaiTi]{SimSun} % 主字体为宋体，粗体为黑体，斜体为楷体
+\setCJKsansfont{SimHei} % 无衬线字体为黑体
+\setCJKmonofont{FangSong} % 等宽字体为仿宋
+
+% 设置西文字体
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+
+% 基础包
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{indentfirst}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[nottoc]{tocbibind}
+\usepackage[perpage]{footmisc}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 设置图表标题格式
+\captionsetup[table]{position=top, labelsep=quad, font={small}}    % 表格标题在上
+\captionsetup[figure]{position=bottom, labelsep=quad, font={small}}    % 图片标题在下
+
+% 定义资料来源命令
+\newcommand{\source}[1]{%
+    \vspace{2pt}%
+    \par\noindent\small\kaishu 资料来源：#1%
+    \vspace{6pt}%
+}
+
+% 页面设置
+\geometry{left=3cm,right=3cm,top=2.5cm,bottom=2.5cm,headheight=15pt}
+
+% 页眉页脚设置
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% 设置页眉样式
+\fancyhead[C]{\songti\zihao{5} \textbf{论文标题}}
+\fancyfoot[C]{\songti\zihao{5} 第 \thepage 页}
+
+% 为目录页设置特殊页眉
+\let\oldtableofcontents\tableofcontents
+\renewcommand{\tableofcontents}{%
+    \fancyhead[C]{\songti\zihao{5} \textbf{论文标题}}
+    \oldtableofcontents
+}
+
+% 行距和段落间距设置
+\setlength{\baselineskip}{20pt}
+\setlength{\parskip}{6pt}
+
+% 标题格式设置
+\titleformat{\section}{\zihao{4}\bfseries\heiti}{\thesection}{1em}{}
+\titleformat{\subsection}{\zihao{-4}\bfseries\heiti}{\thesubsection}{1em}{}
+
+\begin{document}
+
+% 标题页不显示页眉
+\thispagestyle{empty}
+
+% 标题
+\begin{center}
+    \zihao{2}\heiti\bfseries{论文标题}
+    \vspace{20pt}
+\end{center}
+
+% 作者信息
+\begin{center}
+    \zihao{-4}\songti
+    院系：XXX \quad 姓名：XXX \quad 学号：XXX
+    \vspace{30pt}
+\end{center}
+
+% 摘要
+\vspace{10pt}
+\noindent\zihao{-4}\heiti 摘要：
+\zihao{-4}\songti
+在此处输入摘要内容。
+
+\vspace{10pt}
+\noindent\zihao{-4}\heiti 关键词：
+\zihao{-4}\songti
+关键词1；关键词2；关键词3
+
+% 目录
+\newpage
+\tableofcontents
+\newpage
+
+% 正文示例
+\section{研究背景与意义}
+\subsection{研究背景}
+在此处输入研究背景内容。
+
+\subsection{研究意义}
+在此处输入研究意义内容。
+
+\section{文献综述}
+\subsection{国内研究现状}
+在此处输入国内研究现状内容。
+
+\subsection{国外研究现状}
+在此处输入国外研究现状内容。
+
+% 表格示例
+\begin{table}[H]
+    \centering
+    \caption{数据分析结果示例}
+    \label{tab:example}
+    \begin{tabular}{lccc}
+        \toprule
+        指标 & 2021年 & 2022年 & 2023年 \\
+        \midrule
+        GDP增长率(\%) & 8.1 & 3.0 & 5.2 \\
+        通货膨胀率(\%) & 2.1 & 2.8 & 2.3 \\
+        失业率(\%) & 5.1 & 5.5 & 5.2 \\
+        \bottomrule
+    \end{tabular}
+    \source{数据来源：国家统计局}
+\end{table}
+
+% 图表示例
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        width=0.8\textwidth,
+        height=0.4\textwidth,
+        xlabel={年份},
+        ylabel={增长率 (\%)},
+        grid=major,
+        legend pos=north east,
+        legend style={font=\small}
+    ]
+    \addplot[blue,mark=*] coordinates {
+        (2019,6.1)
+        (2020,2.3)
+        (2021,8.1)
+        (2022,3.0)
+        (2023,5.2)
+    };
+    \legend{GDP增长率}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{GDP增长率变化趋势（2019-2023）}
+    \label{fig:gdp-growth}
+    \source{数据来源：国家统计局}
+\end{figure}
+
+% 参考文献
+\begin{thebibliography}{99}
+\zihao{-4}\songti
+
+% 中文文献
+\subsection*{中文文献}
+
+\subsubsection*{中文专著}
+\bibitem{key1} 作者.书名[M].出版社,年份.
+
+\subsubsection*{中文期刊论文}
+\bibitem{key2} 作者.题目[J].期刊名,年份,卷(期):起页-止页.
+
+% 英文文献
+\subsection*{英文文献}
+
+\subsubsection*{英文期刊论文}
+\bibitem{key3} Author. Title[J]. Journal, Year.
+
+\end{thebibliography}
+
+\end{document}
