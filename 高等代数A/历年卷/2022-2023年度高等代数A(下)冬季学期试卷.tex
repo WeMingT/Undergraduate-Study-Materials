@@ -1,0 +1,94 @@
+\subsection{2022-2023年度高等代数A(下)冬季学期试卷}
+
+\begin{center}
+    Texer:萌小小
+\end{center}
+
+\subsubsection*{填空题（5小题，每小题3分，共15分）}
+
+\begin{enumerate}
+    \item 设实对称矩阵$A$的符号差是3,秩是5,则$A$的负惯性指数是\underline{$1$}.
+    \item 矩阵$A=\begin{pmatrix}
+        k &1 &0\\
+        1 &1 &0\\
+        0 &0 &k+2
+    \end{pmatrix}$是正定矩阵的充要条件是$k\underline{> 1}$.
+    \item 设$U$是$n$维欧式空间$V$的子空间，且$\operatorname{dim} U=1$，则$U$在$V$中的正交补空间$U^{\bot }$的维数$\operatorname{dim} U^{\bot }=\underline{n-1}$.
+    \item 多项式$x^3+3x^2-4$与$x^3-3x+2$的首一的最大公因式为$\underline{x^2+x-2}$.
+    \item 设复方阵$A$可对角化，若$f_A(\lambda)=\lambda^3 (\lambda-1)^2$,则$m_A(\lambda)=\underline{\lambda(\lambda-1)}$.
+\end{enumerate}
+
+\subsection*{选择题（5小题，每小题3分，共15分）}
+
+\begin{enumerate}
+    \item 设$A$是2阶复方阵，则$A$的特征多项式是(B).
+    \begin{enumerate}
+        \item[(A)] $\lambda^2+(\operatorname{tr}(A))\lambda+\operatorname{det}(A)$.
+        \item[(B)] $\lambda^2-(\operatorname{tr}(A))\lambda+\operatorname{det}(A)$.
+        \item[(C)] $\lambda^2-(\operatorname{det}(A))\lambda+\operatorname{tr}(A)$.
+        \item[(D)] $\lambda^2+(\operatorname{det}(A))\lambda+\operatorname{tr}(A)$.
+    \end{enumerate}
+    \item 设$A$是$n$阶复方阵则下列叙述中不能$A$在$\mathbb{C}$上可对角化的等价命题的是(D).
+    \begin{enumerate}
+        \item[(A)] $A$的初等因子全是一次的.
+        \item[(B)] $A$有$n$ 个线性无关的特征向量.
+        \item[(C)] $A$的所有特征子空间的维数之和为$n$.
+        \item[(D)] $A$有$n$个互不相同的特征值.
+    \end{enumerate}
+    \item 下列关于$n$阶($n>1$)实对称矩阵的叙述中正确的是(D).
+    \begin{enumerate}
+        \item[(A)] 不一定能对角化.
+        \item[(B)] 特征值不一定是实数.
+        \item[(C)] 特征多项式一定没有重根.
+        \item[(D)] 两个实对称矩阵相似当且仅当它们正交相似.
+    \end{enumerate}
+    \item 下列多项式在$\mathbb{Q}$上可约的是(A).
+    \begin{enumerate}
+        \item[(A)] $x^3-6x^2+15x-14$.
+        \item[(B)] $x^4-2x^3+8x-10$.
+        \item[(C)] $x^4+x^3+x^2+x+1$.
+        \item[(D)] $1+x+\frac{x^2}{2!}+\frac{x^3}{3!}$.
+    \end{enumerate}
+    \item 已知$A$是三阶矩阵，且$\operatorname{r}(A)=1$,则$\lambda=0$(B).
+    \begin{enumerate}
+        \item[(A)] 必是$A$的二重特征值.
+        \item[(B)] 至少是$A$的二重特征值.
+        \item[(C)] 至多是$A$的二重特征值.
+        \item[(D)] 一重，二重，三重特征值都有可能.
+    \end{enumerate}
+\end{enumerate}
+
+\subsection*{???}
+
+\begin{enumerate}
+    \item $A=\begin{pmatrix}
+        1 &a &c\\
+        0 &1 &b\\
+        0 &0 &2
+    \end{pmatrix}$,求出$A$的初等因子组.
+    \item $A$为三阶实对称矩阵，特征值为$\lambda_1=1,\lambda_2=2,\lambda_3=-2$. $x_1=(1,-1,1)^\text{T}$为$A$关于$\lambda_1$的一个特征向量，记$B=???$.
+    \begin{enumerate}
+        \item[(1)] 验证$x_1$为$B$的特征向量并求$B$的全部特征值和特征向量.
+        \item[(2)] 求B.
+    \end{enumerate}
+    \item (10分)设$A$是四阶正交矩阵，且$\operatorname{det}(A)=-1$.写出$A$在正交相似下所有可能的标准形.
+\end{enumerate}
+
+\subsection*{证明题（3题，共40分）}
+
+\begin{enumerate}
+    \item (10分)设$f(x)$是次数大于0的整系数多项式，若$2-\sqrt{3}$是$f(x)$的根.证明$2+\sqrt{3}$也是$f(x)$的根.
+    \item (15分)设$V$是$n$维欧式空间对给定的$0 \not=\eta \in V,0\not=k \in \mathbb{R}$.定义$V$上的线性变换
+    \[\tau(\alpha)=\alpha+k(\alpha,\eta)\eta,\quad \alpha \in V.\]
+    证明:
+    \begin{enumerate}
+        \item[(1)] $\tau$是对称变换.
+        \item[(2)] $\tau$是正交变换当且仅当$k=-\frac{2}{(\eta,\eta)}$;称这个正交变换为镜面反射.
+        \item[(3)] 设$\beta,\gamma$是$V$中两个不同的单位向量，证明存在非零向量$\eta \in V$,使得用$\eta$定义的镜面反射$\tau$能将$\beta$映到$\gamma$.
+    \end{enumerate}
+    \item (15分)设$A,B$是$n$阶正定矩阵.
+    \begin{enumerate}
+        \item[(1)] 举例说明$AB$不一定是正定矩阵.
+        \item[(2)] 求证:$AB$是正定矩阵当且仅当$AB=BA$.
+    \end{enumerate}
+\end{enumerate}

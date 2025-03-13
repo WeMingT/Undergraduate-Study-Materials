@@ -1,0 +1,123 @@
+\subsection{Assignment-1}
+
+\begin{problem}{}{}
+    给定平面多边形，其顶点为$P_{1}(1,2),P_{2}(3,1),$ $P_{3}(7,0),P_{4}(8,2),$
+$P_{5}(6,3),$$P_{6}(7,4),P_{7}(5,5).$求多四形面积.
+\end{problem}
+
+\begin{solution}
+    \begin{align*}
+        A_{P_1P_2P_3P_4P_5P_6P_7} &=\sum_{cyc} (S_{\triangle P_1P_2P_3}) \\
+        &= \sum_{cyc} (\frac{1}{2}(\overrightarrow{P_1P_2} \cdot \overrightarrow{P_1P_3} )) \\
+        &= |\sum_{cyc} (\frac{1}{2}(x_1y_2-x_2y_1))| \\
+        &= \frac{1}{2}|(1 \times 1 - 2 \times 3) + (3 \times 0 - 1 \times 7) + \dots + (5 \times 2 - 2 \times 5)| \\
+        &= \frac{37}{2}.
+    \end{align*}
+\end{solution}
+
+\begin{problem}{}{}
+    求$\overrightarrow{v}=(1,2,3)$到$\overrightarrow{u}=(3,6,-1)$的投影长度、外投影向量、内投影向量.
+\end{problem}
+
+\begin{solution}
+    投影长度: $\displaystyle \operatorname{Comp}_{\overrightarrow{u}} \overrightarrow{v} = |\frac{\overrightarrow{u} \cdot \overrightarrow{v}}{\overrightarrow{u}}| = |\frac{1 \times 3 + 2 \times 6 + 3 \times (-1)}{\sqrt{3^2+6^2+(-1)^2}} |= 6 \sqrt{\frac{2}{23}}.$ \\
+    内投影向量: $\overrightarrow{w}=\operatorname{Proj}_{\overrightarrow{u}} \overrightarrow{v} = \displaystyle \operatorname{Comp}_{\overrightarrow{u}} \overrightarrow{v} \cdot \frac{\overrightarrow{u}}{|\overrightarrow{u}|} = 6 \sqrt{\frac{2}{23}} \cdot \frac{(3,6,-1)}{\sqrt{3^2+6^2+(-1)^2}}= (\frac{18}{23},\frac{36}{23},\frac{-6}{23}).$ \\
+    外投影向量: $\displaystyle \overrightarrow{p}= \overrightarrow{v} - \overrightarrow{ w} = (\frac{5}{23},\frac{10}{23},\frac{75}{23}).$
+\end{solution}
+
+
+\begin{problem}{}{}
+    给定空间三点$P(1,2,1),Q(2,4,-1)$和$R(5,6,-3).$\\
+(1)求$\triangle PQR$面积;\\
+(2)求包含$\triangle PQR$的平面的法向量;\\
+(3)给出含$P,Q,R$三点的平面方程.
+\end{problem}
+
+\begin{solution}
+    (1) $\displaystyle A= \frac{1}{2}|\overrightarrow{PQ} \times \overrightarrow{PR}|= \frac{1}{2}|(1,2,-2) \times (4,4,-3)| = 2\sqrt{2}. $\\
+    (2) $\overrightarrow{n}= \overrightarrow{PQ} \times \overrightarrow{PR} = \det \begin{bmatrix}
+        i &j &k \\
+        1 &2 &-2 \\
+        4 &4 &-4    
+    \end{bmatrix} = (0,-4,-4)$.\\
+    (3) $\pi: -4(y-2)-4(z-1)=0 \Leftrightarrow y+z=3$.
+\end{solution}
+
+\begin{problem}{}{}
+    经定空间四点$P(1,2,0),Q(2,4,-1),R(5,6,-3)$和$S(1,1,1)$.\\
+(1)求以$P,Q,R$和$S$为顶点的平行六面体体积.\\
+(2)求平行六面体相对于包含$\triangle PQR$的底面的高.
+\end{problem}
+
+\begin{solution}
+    (1) $ \displaystyle 
+        V = (\overrightarrow{PQ},\overrightarrow{PR},\overrightarrow{PS}) =\left| \det \begin{bmatrix}
+            1 &2 &-1 \\
+            4 &4 &-3 \\
+            0 &-1 &1
+        \end{bmatrix} \right |= 3$.\\
+    (2) $\displaystyle h = \frac{V}{|\overrightarrow{PQ} \times \overrightarrow{PR}|} = \frac{3}{|(1,2,-1) \times (4,4,-3)} = \frac{\sqrt{21}}{7}$.
+\end{solution}
+
+\begin{problem}{}{}
+    给定向量$\overrightarrow{u}=(1,1,1)^{T},\overrightarrow{v}=(1,-1,1)^{T},\overrightarrow{w}=(3,5,7)^{T}$：\\
+(1)给出包含$\overrightarrow{u}$和$\overrightarrow{v}$的子空间$W=\operatorname{span}\left\{\overrightarrow{u},\overrightarrow{v}\right\}$的表达式.\\
+(2)给出$\overrightarrow{w}$向$W$投影的正规方程,求投影矩阵$R$，并求$\operatorname{Proj}_{W} \overrightarrow{w};$\\
+(3)求$\overrightarrow{w}$关于$W$的外投影(向量).
+\end{problem}
+
+\begin{solution}
+    (1) $W=\{\lambda \overrightarrow{u} + \mu \overrightarrow{v};\lambda,\mu \in \mathbb{R}\}=(\lambda+\mu,\lambda - \mu, \lambda + \mu)$. \\
+    (2) 正规方程:
+    \begin{equation*}
+        \begin{bmatrix}
+            1 &1 &1 \\
+            1 &-1 &1
+        \end{bmatrix} \cdot 
+        \begin{bmatrix}
+            1 &1 \\
+            1 &-1 \\
+            1 &1
+        \end{bmatrix} \overrightarrow{x} = \begin{bmatrix}
+            1 &1 &1 \\
+            1 &-1 &1
+        \end{bmatrix} \cdot \begin{bmatrix}
+            3\\
+            5\\
+            7
+        \end{bmatrix}.
+    \end{equation*}\\
+    投影矩阵: $\displaystyle R=A(A'A)^{-1}A'=\begin{bmatrix}
+        1 &1 \\
+        1 &-1 \\
+        1 &1
+    \end{bmatrix}
+    \cdot
+    (\begin{bmatrix}
+        1 &1 &1 \\
+        1 &-1 &1
+    \end{bmatrix} \cdot \begin{bmatrix}
+        1 &1 \\
+        1 &-1 \\
+        1 &1
+    \end{bmatrix})^{-1} \cdot \begin{bmatrix}
+        1 &1 &1 \\
+        1 &-1 &1
+    \end{bmatrix}= \begin{bmatrix}
+        \frac{1}{2} & 0 & \frac{1}{2} \\
+        0 & 1 & 0 \\
+        \frac{1}{2} & 0 & \frac{1}{2}
+    \end{bmatrix}.$\\
+    $\operatorname{Proj}_{W} \overrightarrow{w} = R \cdot \overrightarrow{w} = \begin{bmatrix}
+        \frac{1}{2} & 0 & \frac{1}{2} \\
+        0 & 1 & 0 \\
+        \frac{1}{2} & 0 & \frac{1}{2}
+    \end{bmatrix} \cdot \begin{bmatrix}
+        3\\5\\7
+    \end{bmatrix}= \begin{bmatrix}
+        5\\5\\5
+    \end{bmatrix}.$\\
+    (3) 外投影: $\overrightarrow{w}-\operatorname{Proj}_{W} \overrightarrow{w}=\begin{bmatrix}
+        -2\\0\\2
+    \end{bmatrix}$.
+\end{solution}

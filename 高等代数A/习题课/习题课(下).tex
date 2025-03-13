@@ -1,0 +1,161 @@
+\subsection{习题课(下)}
+
+\subsubsection{2025-1-10日习题课}
+
+\begin{enumerate}
+    \item 设
+
+    $$
+    A=\begin{pmatrix}
+    0 &1 &1\\
+    b &2 &1\\
+    1 &-1 &a
+    \end{pmatrix}
+    $$
+    
+    有特征向量
+    
+    $$
+    \beta=\begin{pmatrix}
+    1\\1\\-1
+    \end{pmatrix}
+    $$
+    
+    求 $A^{2022}$。
+    \item 设 $A_m,B_n$ 是复矩阵，$A$ 与 $B$ 无公共的特征值。若 $A,B$ 可对角化，求证
+    \item 设
+
+    $$
+    D=\begin{pmatrix}
+    A_m &C_{m \times n}\\
+    C^{\mathrm{T}} &B_n
+    \end{pmatrix}
+    $$
+    
+    其中 $A,B,C$ 均为实矩阵，且 $A=A',B=B'$。求证：
+    
+    1. 若 $D$ 正定，则 $A,B$ 可逆。
+    2. 若 $D$ 正定，则 $B-C^{\mathrm{T}}A^{-1}C$ 也正定。
+    \item 设 $A_n,B_n \not= 0$，且有 $A^2=A,B^2+B=0$。
+
+    1. 证明 $\mu=1,\lambda=-1$ 分别是 $A,B$ 的特征值。
+    2. 若 $AB=0=BA$，$\alpha$ 是 $A$ 关于特征值 1 的特征向量，$\beta$ 是 $B$ 关于特征值 -1 的特征向量，证明 $\alpha,\beta$ 线性无关。
+    \item 设
+
+    $$
+    A=\begin{pmatrix}
+    0 &1 &0\\
+    1 &0 &1\\
+    0 &0 &1
+    \end{pmatrix}
+    $$
+    
+    1. 证明：$A^n=A^{n-2}+A^2-I_3,n \ge 3$。
+    2. 求 $A^{10}$。
+    \item 求 $x^3-1$ 与 $x^5-1$ 的最大公因式。
+    \item 二次型 $f(x_1,x_2,x_3)=ax_1^2-ax_2^2+(a-1)x_3^2+2x_1x_3-2x_2x_3$，则 ${} a=\underline{1,0} {}$ 时，在 $\mathbb{R}$ 上的规范形为 $y_1^2-y_2^2$。
+\end{enumerate}
+
+\subsubsection{2025-2-17日习题课}
+
+\begin{enumerate}
+    \item 证明：秩为 $r$ 的对称阵可以写成 $r$ 个秩为 $1$ 的对称阵之和。
+    \item 证明：一个实二次型 $f$ 可以分解为两个实系数的一次齐次多项式的乘积当且仅当 $r(f)=2$ 且符号差 $s=0,$ 或者秩等于 $1.$
+    \item 设实二次型
+
+    $$
+    f(x_1,x_2,\dots,x_n)=\sum^s_{i=1}(a_{i1}x_1+\dots+a_{in}x_n)^2
+    $$
+    
+    证明：$\operatorname{r}(f)=\operatorname{r}(A),A=(a_{ij})_{s \times n}$。
+    \item $t$ 取何值时，二次型
+
+$$
+t(x_1^2+x_2^2+x_3^2)+2x_1x_2-2x_1x_3+2x_2x_3
+$$
+
+正定？
+    \item 实数 $a, b$ 满足什么条件时
+
+    $$
+    \begin{pmatrix}
+    a & 1 & b \\
+    1 & -1 & 0 \\
+    b & 0 & -1
+    \end{pmatrix}
+    $$
+    
+    正定，负定，半正定，半负定，不定？
+    \item 证明：任一实对称矩阵，都是两个正定矩阵的差。
+    \item 设半正定矩阵 $A$ 且 $\operatorname{r}(A)=1$, 证明：存在 $n$ 维非零实向量 $\alpha$ s.t. $A=\alpha \alpha^{\prime}$.
+\end{enumerate}
+
+\subsubsection{2025-2-19日习题课}
+
+\begin{enumerate}
+    \item 在 $\mathbb{R}[x]$, 且 $\forall f \in \mathbb{R}[x],\deg f<4$ ，定义 $(f(x) , g(x))=\int_0^1 f(x) g(x) \mathrm{d} x$ ．
+
+    （1）证： $\mathbb{R}[x]$ 为欧式空间。
+    
+    （2）求与 $1, x, x^2$ 都正交的多项式。
+    \item 证明：任一实可逆矩阵 $A$ ，都可以分解为 $A=Q R$ ，$Q$ 为正交矩阵，R 为上三角矩阵。（QR 分解）
+    \item 证明：任一正定矩阵 A 可作分解 $A=T^{\prime} T$ ，其中 $T$ 为对角元均为正的上三角矩阵。（Cholesky 分解）
+    \item $(1,2,2),(-1,0,2) \in \mathbb{R}^3$ ，将其变为标准正交的向量组.
+    \item 设 $A \in S_n(\mathbb{R}),B$ 为 $n$ 阶正定矩阵，证明：$\exists C \in \operatorname{GL}_{n}(\mathbb{R})$ s.t.$C^\prime AC,C^{\prime}BC$ 均为对角阵。
+    \item 设 $A,B,C$ 为正定阵，若 $ABC$ 为对角阵，证明 $ABC$ 为正定阵。
+    \item $A=\begin{pmatrix}-3 &4\\4 &3\end{pmatrix},$ 求正交阵 $T,$s.t.$T^{\prime}AT$ 为对角阵。
+\end{enumerate}
+
+\subsubsection{2025-2-21日习题课}
+
+\begin{enumerate}
+    \item 用非退化线性替换化二次型
+
+    $$
+    f(x_{1},x_{2},x_{3},x_{4},x_{5})=x_{1}x_{2}+x_{2}x_{3}+x_{3}x_{4}+x_{4}x_{5}
+    $$
+    
+    为规范形，并求二次型的正惯性指数和符号差。
+    \item 求矩阵
+
+    $$
+    \begin{pmatrix}
+    1 &-3 &0  & 3 \\
+    -2 & 6 & 0 & 13 \\
+    0 & -3 & 1 & 3 \\
+    -1 & 2 & 0 & 8
+    \end{pmatrix}
+    $$
+    
+    的 Jordan 标准型。
+    \item 设 $\varphi$ 是 $n$ 维线性空间 $V$ 上的自同构，若 $W$ 是 $\varphi$ 的不变子空间，求证：$W$ 也是 $\varphi^{-1}$ 的不变子空间．
+    \item 设 $f_{1},f_{2},\dots,f_{2024},g_{1},g_{2},\dots,g_{2025} \in P[x],$ 证明：$(f_{1}f_{2}\dots f_{2024},g_{1}g_{2}\dots g_{2025})=1 \Leftrightarrow (f_{i},g_{j})=1,i=1,2,\dots,2024;j=1,2,\dots,2025.$
+    \item 求多项式 $f(x)=x^{4}+x^{3}-3x^{2}-4x-1$ 与 $g(x)=x^{3}+x^{2}-x-1$ 的最大公因式。
+    \item 设 $A$ 为五阶方阵，其不变因子为 $1,1,1,(\lambda-2)^{2},(\lambda-3)(\lambda-1)^{2},$ 求 $A$ 的 Jordan 标准型。
+    \item 求 $x^{3}-6x^{2}+15x-14$ 的有理根。
+\end{enumerate}
+
+\subsubsection{2025-2-24日习题课}
+
+\begin{enumerate}
+    \item 设 $A,B$ 为实对称矩阵，$B$ 正定，则 $A$ 正定 $\Leftrightarrow AB$ 的特征值是正数。
+    \item 设 $A$ 半正定，$k \in \mathbb{Z}^{+},$ 则 $\exists !$ 半正定矩阵 $B,$s.t.$A=B^{k}.$
+    \item 设 $A \in M_{n \times n}(\mathbb{R}),$ 则 ${} \exists U \in O(m),V \in O(n),S=\begin{pmatrix}\operatorname{diag}\{\lambda_{1},\dots,\lambda_{v}\} & 0 \\ 0 & 0\end{pmatrix}, {}$ s.t $A=USV.$
+\end{enumerate}
+
+\subsubsection{2025-2-26日习题课}
+
+\begin{enumerate}
+    \item 设 $\alpha_{1},\alpha_{2},\alpha_{3}$ 是三维欧氏空间的一组标准正交基，$\alpha=3\alpha_{1}+2\alpha_{2}+4\alpha_{3},\beta=\alpha_{1}-2\alpha_{2}.$
+    1. 求与 $\alpha,\beta$ 都正交的全部向量；
+    2. 求与 $\alpha,\beta$ 都正交的全部单位向量。
+    \item 设 $\alpha_{1},\alpha_{2},\alpha_{3}$ 是三维欧氏空间 $V$ 的一组基，其度量矩阵为 $A=\begin{pmatrix}1 & -1 & 2 \\ -1 & 2 & -1 \\ 2 & -1 & 6\end{pmatrix}.$
+
+    1. 令 $\gamma_{1}=\alpha_{1}+\alpha_{2},$ 证明 $\gamma_{1}$ 是一个单位向量。
+    2. 求参数 $k,$ 使 $\beta_{2}=\alpha_{1}+\alpha_{2}+k\alpha_{3}$ 与 $\gamma_{1}$ 正交。
+    3. 把 $\beta_{2}$ 单位化，记作 $\gamma_{2}.$
+    4. 扩充 $\gamma_{1},\gamma_{2}$ 为 $V$ 的一组标准正交基。
+    \item 求一正交相似变换矩阵，将矩阵 $A$ 化为对角矩阵，其中 $A=\begin{pmatrix}1 & 0 & 2 \\ 0 & 3 & 0 \\ 2 & 0 & 1\end{pmatrix}.$
+    \item 已知二次型 $f(x_{1},x_{2},x_{3})=2x_{1}^{2}+3x_{2}^{2}+3x_{3}^{2}+2tx_{2}x_{3}(t > 0)$ 通过正交线性替换化为标准型 $f=y_{1}^{2}+2y_{2}^{2}+5y_{3}^{2},$ 求参数 $t$ 及所用的正交线性替换。
+    \item 已知 $A,A-E$ 都是 $n$ 阶正定矩阵，证明 $E-A^{-1}$ 是正定矩阵。
+\end{enumerate}
